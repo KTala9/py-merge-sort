@@ -3,14 +3,8 @@
 A module which implements the MergeSort algorithm.
 """
 
-# conda execute
-# env:
-#  - python >=3
-#  - numpy
-
 import sys
-import re # regular expressions
-from numpy import * # scientific math library
+
 
 def parseInput(input):
     """
@@ -20,6 +14,10 @@ def parseInput(input):
 
 
 def mergeSort(a):
+    """
+    Sorts and array of numbers into ascending order.
+    """
+
     if len(a) == 1:
         return a;
     else:
@@ -30,6 +28,11 @@ def mergeSort(a):
 
 
 def merge(a1, a2):
+    """
+    Merges two arrays of numbers (both of which are expected to be pre-sorted into ascending order),
+    into a new array, sorted in ascending order.
+    """
+
     nTotalLength = len(a1) + len(a2)
     aMerged = []
     i = 0
